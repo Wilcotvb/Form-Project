@@ -1,65 +1,155 @@
-/* Global Layout Set-up Mobile First */
-body {
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-  text-align: left;
+input, select, textarea{
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  color: #aaaaaa;
+  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 10px 20px;
 }
 
 h1 {
   font-size: 1em;
-  background-color: #6A6A6A;
-  text-transform: uppercase;
-  padding: 25px 0 25px 0;
   color: white;
+  background-color: #404040;
+  text-transform: uppercase;
+  padding: 20px;
 }
 
 h2 {
+  color: black;
   font-size: 1.25em;
-  margin-bottom: 10px;
-}
-header {
-  text-align: center;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  width: 95%;
-  margin: 0 auto;
-  border: none;
+  margin-bottom: 20px;
 }
 
-.newsletter {
+fieldset {
+  text-align: left;
   border: none;
-  margin: 10px 0 10px 0;
-}
-
-
-input, select, radio{
-  display: inline;
-  background: #FAFAFA;
-  border: none;
-  font-size: 16px;
-  height: auto;
-  margin: 10px 0 10px 0;
-  padding: 15px;
-  background-color: #FAFAFA;
-  color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 30px;
-  border-radius: 5px;
+  padding: 0;
 }
 
 label {
-  margin: 20px 0 5px 0;
-  color: #6A6A6A;
-}
-.newsletter label{
-  margin: 40px 0 40px 0;
-
+  display: block;
+  margin-bottom: 8px;
 }
 
+label.light {
+  display: inline;
+  margin: 10px;
+  line-height: 30px;
+}
 
-/* Global Item Styles */
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: teal;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid teal;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 teal inset;
+  margin-bottom: 10px;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="select"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="number"]{
+  width: 40%;
+}
+
+input:focus {
+  border: 2px solid navy;
+}
+
+textarea {
+  height: 100px;
+}
+::placeholder {
+  text-align: right;
+  font-style: italic;
+  margin-right: 10px;
+}
+
+.copyright {
+  font-style: italic;
+}
+
+.solid {
+  border-top: 5px solid #404040;
+  margin-top: 35px;
+}
+
+.solid-2 {
+  border-top: 2px solid #404040;
+}
+
+.top-margin {
+  margin-top: 20px;
+}
+/* Placeholder for selector field */
+select:required:invalid {
+        color: #666;
+      }
+option[value=""][disabled] {
+        display: none;
+      }
+
+/* Media quieries */
+
+@media screen and (min-width: 480px) {
+
+  body {
+    max-width: 768px;
+  }
+
+  .contact-information {
+
+  }
+  .contact-information label {
+
+
+  .contact-information input {
+
+    margin-bottom: 8px;
+    width: 60%;
+  }
+
+
+}
