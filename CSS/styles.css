@@ -18,13 +18,15 @@ body {
 footer {
   height: 20vh;
 }
+
 header h1 {
-  font-size: 1em;
+  font-size: 2em;
   color: white;
   background-color: #fec3a6;
   text-transform: uppercase;
   padding: 20px;
   text-align: center;
+  margin: 0;
 }
 
 .top {
