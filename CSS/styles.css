@@ -13,7 +13,7 @@ body {
   width: 100%;
   color: #ff928b;
   background-color: #cdeac0;
-  
+
 }
 footer {
   height: 20vh;
@@ -79,7 +79,6 @@ button {
   width: 100%;
   border: 1px solid #fec3a6;
   border-width: 1px 1px 3px;
-  box-shadow: 1px #fec3a6 inset;
   margin-bottom: 10px;
 }
 
@@ -128,7 +127,7 @@ textarea {
   text-align: right;
   font-style: italic;
   margin-right: 10px;
-  color: #ff6b6b;
+  color: #bc4749;
 }
 
 .copyright {
@@ -164,8 +163,8 @@ option[value=""][disabled] {
       ==================================== */
 
       @media screen and (min-width:768px) {
-          body {
-             max-width: 768px;
+          main {
+    max-width: 700px;
          }
 
        .contact-information {
@@ -181,3 +180,7 @@ option[value=""][disabled] {
           width: 25%;
           margin: 20px 0;
        }
+       input[type="number"] {
+         width: 25%;
+       }
+     }
