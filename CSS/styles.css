@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 input, select, textarea{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8,31 +11,49 @@ body {
   font-family: 'montserrat', sans-serif;
   font-size: 16px;
   width: 100%;
-  text-align: center;
-  color: #aaaaaa;
-  box-sizing: border-box;
-  margin: 10px auto;
-  padding: 10px 20px;
+  color: #ff928b;
+  background-color: #cdeac0;
+  
 }
-
-h1 {
+footer {
+  height: 20vh;
+}
+header h1 {
   font-size: 1em;
   color: white;
-  background-color: #404040;
+  background-color: #fec3a6;
   text-transform: uppercase;
   padding: 20px;
+  text-align: center;
+}
+
+.top {
+  text-align: center;
+}
+
+main {
+    margin: 0 auto;
+    padding: 6px;
 }
 
 h2 {
-  color: black;
+  color: #ffac81;
   font-size: 1.25em;
   margin-bottom: 20px;
 }
 
 fieldset {
-  text-align: left;
   border: none;
-  padding: 0;
+  padding: 18px 12px;
+  margin: 32px auto 16px;
+}
+
+.contact-information{
+  border: none;
+  padding: 18px 12px;
+  margin: 32px auto 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
@@ -43,21 +64,22 @@ label {
 label.light {
   display: inline;
   margin: 10px;
-  line-height: 30px;
+  line-height: 40px;
+  font-weight: 600;
 }
 
 button {
   padding: 19px 39px 18px 39px;
   color: #FFF;
-  background-color: teal;
+  background-color: #ff928b;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
   width: 100%;
-  border: 1px solid teal;
+  border: 1px solid #fec3a6;
   border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 teal inset;
+  box-shadow: 1px #fec3a6 inset;
   margin-bottom: 10px;
 }
 
@@ -75,15 +97,16 @@ input[type="select"],
 input[type="url"],
 textarea,
 select {
-  background: rgba(255,255,255,0.1);
+  display: inline-block;
+  background: #e9c46a;
   border: none;
   font-size: 16px;
   height: auto;
-  margin: 0;
+  padding: 18px 20px;
+  margin: 8px 0;
   outline: 0;
-  padding: 15px;
   width: 100%;
-  background-color: #e8eeef;
+  background-color: #efe9ae;
   color: #8a97a0;
   border-radius: 5px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -105,19 +128,24 @@ textarea {
   text-align: right;
   font-style: italic;
   margin-right: 10px;
+  color: #ff6b6b;
 }
 
 .copyright {
   font-style: italic;
+  text-align: center;
 }
 
 .solid {
-  border-top: 5px solid #404040;
+  border-top: 5px solid #bc4749;
   margin-top: 35px;
+  background-color: #cdeac0;
 }
 
 .solid-2 {
-  border-top: 2px solid #404040;
+  border-top: 2px solid #bc4749;
+  margin-top: 5px;
+    background-color: #cdeac0;
 }
 
 .top-margin {
@@ -125,31 +153,31 @@ textarea {
 }
 /* Placeholder for selector field */
 select:required:invalid {
-        color: #666;
+        color: #bc4749;
       }
 option[value=""][disabled] {
         display: none;
       }
 
-/* Media quieries */
+      /* =================================
+        Media Query: use a 768px breakpoint for desktop
+      ==================================== */
 
-@media screen and (min-width: 480px) {
+      @media screen and (min-width:768px) {
+          body {
+             max-width: 768px;
+         }
 
-  body {
-    max-width: 768px;
-  }
+       .contact-information {
+          flex-direction: row;
+          flex-wrap: wrap;
+       }
+       .contact-information input, select {
+          width: 70%;
+          margin: 8px 8px;
+       }
 
-  .contact-information {
-
-  }
-  .contact-information label {
-
-
-  .contact-information input {
-
-    margin-bottom: 8px;
-    width: 60%;
-  }
-
-
-}
+       .contact-information label {
+          width: 25%;
+          margin: 20px 0;
+       }
